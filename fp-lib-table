@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "Local")(type "KiCad")(uri "/Users/colincatlin/Documents/catlin_footprints")(options "")(descr ""))
+  (lib (name "JST_B3B-PH-SM4-TB(LF)(SN)")(type "KiCad")(uri "/Users/colincatlin/Documents/catlin_footprints/JST_B3B-PH-SM4-TB(LF)(SN).pretty")(options "")(descr ""))
+)
