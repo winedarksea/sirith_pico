@@ -48,7 +48,7 @@ For experimentation, it is recommended to begin by using GPIO 7, 28, and 29 as t
 
 For brevity, pins on the board are labeled GP instead of GPIO or only the number may be provided (ie 11 = GP11 = GPIO11). This should be considered functionally identical.
 
-System Power:
+### System Power:
 
 Primary system power delivery is through the device’s USB-C port. This port provides both data connection to the RP2040 IC as well as device power.  The CYPD3177 device is preconfigured by resistor dividers to negotiate for the highest available voltage up to 20V and 3A. This device can also be configured over i2c from the RP2040 MCU. If the device is only able to negotiate 5V power, the USB default standard power, the LED designated PD FAILURE on the board will be lit.
 
@@ -59,7 +59,7 @@ There are empty footprints under the DC barrel port for the addition of an LED a
 
 A small test point header labeled VBUS should show the chosen power supply’s input voltage that will be received by the MAX77960.
 
-Battery Management
+### Battery Management
 
 The MAX77960 provides battery charging and system voltage regulation with many inclusive features such as overcurrent protection and thermal shutdown. By default this is configured to use a 3S Lipo (three cell lithium batteries usually labeled 11.1V) with a regulated system max voltage of 12V and system current of 4 amps. By soldering the CNFG JP6 jumper on the bottom of the board, users may switch to a default configuration to 2S (two cell lithium batteries usually labeled 7.4V) at 8V system. The device WILL NOT automatically detect battery type. Connecting the incorrectly configured battery type may result in catastrophic battery failure. To double check the system’s current battery configuration, connect device without battery to DC power and use either the onboard INA219 or a voltmeter to measure Vsys. It should be around 8V in 2S configuration and around 12V in 3S configuration. Please refer to the MAX77960 datasheet for full details.
 
@@ -87,17 +87,33 @@ Theoretical max power output o MPM54304 is 6A for 5V, 3A for 3V3 and 3A for 1V8,
 
 It is recommended to have inline resistors or PTC fuses on power lines going off board, especially on the 3V3 line which controls the MCU, to avoid brownouts from external shorts, as the overcurrent protection on the MPM54304 will take down the entire power net in the event of a short. The Power Good pin from this IC is connected to a circular test point on the bottom of the board.
 
-Board Footprint
+### Board Footprint
+
+![plot](./img/real_view.jpg)
 
 The four layer printed circuit board measures 50 mm * 158.25 mm. Mounting holes for M3 screws are present on all four corners. The connections of these are rather irregular. Two are unplated through holes with no copper connection. Two others are plated through holes which should provide more resistance to wear and tear. One, located in the VBat section of the board, is connected to board ground by a 1M Ohm resistor. The other in the opposing corner near the QTPy/Xiao footprint is connected to ground by a capacitor with an adjacent footprint for an additional capacitor, resistor, or ferrite bead if desired, that plated through hole is also connected to USB shield, if present.
 
-QTPy/Xiao
+### QTPy/Xiao
 
 A footprint designed to be compatible with most Adafruit Industries QTPy or SeeedStudio Xiao layout development board exists on the bottom of this board primarily intended for adding some wireless connectivity, if desired. These devices may be soldered directly or using pin headers, double checking proper alignment. Only four pins of the attached board are connected to the MCU. 5V power provides power to the 5V/USB power of the device through a Schottky diode, resulting in a minor voltage drop (no issues have been observed as result of this voltage drop) and allowing simultaneous connecting of the smaller board with USB. GND is also connected as well as the TX and RX pins of the device enabling communication with pins 24 and 25 of the RP2040 (see Table 1).
 
-Programming the Board
+### Programming the Board
 
 Programming the board should be identical in most ways to programming a Raspberry Pi Pico. BOOTSEL is held down while the device is plugged into the USB port of a host device to allow installation of UF2 boot files on initial setup. All UF2 files compatible with Raspberry Pi Picos should be compatible with this device, although note that pin aliases in the device software, such as “LED” pin will not align with a board LED.
+
+### i2c addresses
+* 0x08 = CYPD3177
+* 0x23 =TPS probably
+* 0x3C = display, if connected
+* 0x40 = INA219
+* 0x68 = MPM
+* 0x68 = RTC
+* 0x69 = MAX probably
+
+* 0x10 = BMM150
+* 0x68 = RTC
+* 0x68/Ox69 = BMI270
+* Ox77/Ox76 = BMP390
 
 ### Table 1: GPIO Functions
 | **Pin/Output**  | **Functions**                                                                                                               | **Onboard Protections/Connections**                                                                                          |
