@@ -103,7 +103,6 @@ Programming the board should be identical in most ways to programming a Raspberr
 
 ### i2c addresses
 * 0x08 = CYPD3177
-* 0x23 =TPS probably
 * 0x3C = display, if connected
 * 0x40 = INA219
 * 0x68 = MPM
@@ -112,8 +111,9 @@ Programming the board should be identical in most ways to programming a Raspberr
 
 * 0x10 = BMM150
 * 0x68 = RTC
-* 0x68/Ox69 = BMI270
 * Ox77/Ox76 = BMP390
+* 0x1C = LIS3MDL
+* 0x6A = LSM6DSOX
 
 ### Table 1: GPIO Functions
 | **Pin/Output**  | **Functions**                                                                                                               | **Onboard Protections/Connections**                                                                                          |
