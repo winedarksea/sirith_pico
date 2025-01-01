@@ -1,5 +1,4 @@
 # Sirith Pico
-#### Designed by Colin Catlin
 #### License: CERN Open Hardware Licence Version 2 - Weakly Reciprocal
 I ask only that you attribute me, Colin Catlin, if you do make anything awesome with it, and more importantly, share with me as I would love to see others putting my hard work to good use. Feel free to reach out with any issues you run into.
 
