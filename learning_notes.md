@@ -368,6 +368,7 @@ Not populated if no equivalents available (all should be hand solderable):
 	Mounting holes changed
 Pair with a ATECC608 breakout for code security, or use a code security feature on the Xiao/QTpy breakout spot
 
+0x08 = CYPD3177
 0x23 =TPS probably
 0x3C = display, if connected
 0x40 = INA219
