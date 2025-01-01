@@ -10,30 +10,30 @@ This board went through countless digital versions, two expert reviews, and no l
 Recommendations: switch the Fuse block on the "Batt Out" to PTC resettable fuse(s). The current fuses seem to not always contact the mounts fully.
 
 Highlighted Capabilities:
-	USB C Power Delivery Input up to 60W by default
-	2S or 3S Lipo Power and Charging
-	Regulated and adjustable 8V or 12V system power
-	Regulated 5V, 3.3V, and 1.8V power supply output
-	User controllable output for high amperage output directly from battery*
-	User controllable outputs for regulated system and 5V power
-	Integrated i2c power monitoring circuit
-	Integrated SD Card mount
-	RP2040 Dual Core Microcontroller with 16 MB of flash memory
-	IMU, Magnometer, Barometer
-	RTC (if present)
-	User-controllable status LEDs
-	Pin layouts for connecting 4x 5V servos and 4x high voltage servos
-	One 5V level shifted GPIO pin for communicating with devices such as LED light strips
-	Footprint for Xiao or QtPy footprint boards for integration of wireless connectivity via UART to RP2040 (add on board not included)
-	Integrated protection circuits on most system inputs and outputs
-	Qwiic compatible connections of easy integration of other boards
-	Assortment of board mounting options for 50 mm * 158.25 mm board
+* USB C Power Delivery Input up to 60W by default
+* 2S or 3S Lipo Power and Charging
+* Regulated and adjustable 8V or 12V system power
+* Regulated 5V, 3.3V, and 1.8V power supply output
+* User controllable output for high amperage output directly from battery*
+* User controllable outputs for regulated system and 5V power
+* Integrated i2c power monitoring circuit
+* Integrated SD Card mount
+* RP2040 Dual Core Microcontroller with 16 MB of flash memory
+* IMU, Magnometer, Barometer
+* RTC (if present)
+* User-controllable status LEDs
+* Pin layouts for connecting 4x 5V servos and 4x high voltage servos
+* One 5V level shifted GPIO pin for communicating with devices such as LED light strips
+* Footprint for Xiao or QtPy footprint boards for integration of wireless connectivity via UART to RP2040 (add on board not included)
+* Integrated protection circuits on most system inputs and outputs
+* Qwiic compatible connections of easy integration of other boards
+* Assortment of board mounting options for 50 mm * 158.25 mm board
 
 Primary Integrated Circuits (IC):
-	RP2040 - primary microcontroller (MCU)
-	MAX77960 - battery charger and system voltage regulation
-	MPM54304 - 5V, 3.3V, and 1.8V buck regulator
-	CYPD3177 - usb pd policy negotiations
+* RP2040 - primary microcontroller (MCU)
+* MAX77960 - battery charger and system voltage regulation
+* MPM54304 - 5V, 3.3V, and 1.8V buck regulator
+* CYPD3177 - usb pd policy negotiations
 
 ![plot](./img/3d_view.png)
 
