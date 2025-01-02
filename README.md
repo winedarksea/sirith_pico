@@ -1,9 +1,9 @@
 # Sirith Pico
 #### Designed by Colin Catlin
 #### License: CERN Open Hardware Licence Version 2 - Weakly Reciprocal
-I ask only that you attribute me if you do make anything awesome with it, and more importantly, share with me as I would love to see others putting my hard work to good use. Feel free to reach out with any issues you run into.
+I ask only that you attribute me if you do make anything awesome with it, and more importantly, share with me as I would love to see others putting my hard work to good [use](https://syllepsis.live/2025/01/02/autonomous-ambush-missiles-and-my-first-circuit-board/). Feel free to reach out with any issues you run into.
 
-This board was designed to do something standard dev boards cannot do: provide high power (12V, 60W) output with a micro controller and a powerful rechargeable battery. It was designed to power something like a Raspberry Pi Zero, manage an array of servos, contain basic sensor data, log data to an SD card, and send and switch high power off board.
+This board was designed to do something standard dev boards cannot do: provide high power (12V, 60W) output with a microcontroller and a powerful rechargeable battery. It was designed to power something like a Raspberry Pi Zero, manage an array of servos, contain basic sensor data, log data to an SD card, and send and switch high power off board.
 
 As a number of the ICs on this board are rather expensive, there is also a fairly extensive focus on circuit protections for power sources and GPIO pins, with the aim of reducing the probability of damage to the board.
 
@@ -135,7 +135,7 @@ Programming the board should be identical in most ways to programming a Raspberr
 | RP2040 GPIO 14  | Header near system 5V outputs                                                                                               | Connected to button, can be programmed as an input                                                                           |
 | RP2040 GPIO 15  | 5V Logic Level GPIO, level shifted by BSS138 with 110K Ohm pull-up to 5V                                                    | 330 Ohm series resistor                                                                                                      |
 | RP2040 GPIO 16  | INOKB to MAX77960<br>pulls low when DC power present, floating when disconnected                                            |                                                                                                                              |
-| RP2040 GPIO 17  | Enables VBatt MOSFET when pulled high                                                                                       | 330 Ohm series resistor, 1M Ohm pull down to GND                                                                             |
+| RP2040 GPIO 17  | Enables VBatt MOSFET and LED when pulled high                                                                                       | 330 Ohm series resistor, 1M Ohm pull down to GND                                                                             |
 | RP2040 GPIO 18  | CLK pin of SD Card                                                                                                          |                                                                                                                              |
 | RP2040 GPIO 19  | CMD pin of SD Card                                                                                                          |                                                                                                                              |
 | RP2040 GPIO 20  | DAT0 of SD Card                                                                                                             | 10K pull-up to 3V3                                                                                                           |
