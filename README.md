@@ -1,6 +1,7 @@
 # Sirith Pico
+#### Designed by Colin Catlin
 #### License: CERN Open Hardware Licence Version 2 - Weakly Reciprocal
-I ask only that you attribute me, Colin Catlin, if you do make anything awesome with it, and more importantly, share with me as I would love to see others putting my hard work to good use. Feel free to reach out with any issues you run into.
+I ask only that you attribute me if you do make anything awesome with it, and more importantly, share with me as I would love to see others putting my hard work to good use. Feel free to reach out with any issues you run into.
 
 This board was designed to do something standard dev boards cannot do: provide high power (12V, 60W) output with a micro controller and a powerful rechargeable battery. It was designed to power something like a Raspberry Pi Zero, manage an array of servos, contain basic sensor data, log data to an SD card, and send and switch high power off board.
 
@@ -109,7 +110,6 @@ Programming the board should be identical in most ways to programming a Raspberr
 * 0x68 = RTC
 * 0x69 = MAX probably
 
-* 0x10 = BMM150
 * 0x68 = RTC
 * Ox77/Ox76 = BMP390
 * 0x1C = LIS3MDL
